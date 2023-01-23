@@ -2,7 +2,7 @@ class ValidaFormulario{
     //nome, sobrenome, cpf, senha, repetirSenha
     constructor(){
         this.formulario = document.querySelector('.formulario'); //capturando o formulário.
-        this.eventos();
+        this.eventos(); //chamando a funçaõ eventos assim que iniciarlizar o construtor
     }
 
     eventos(){
@@ -24,7 +24,7 @@ class ValidaFormulario{
 
     isValid(){
         let valid = true;
-        for(let errorText of this.formulario.querySelectorAll('.error-text')){
+        for(let errorText of this.formulario.querySelectorAll('.error-text')){//Pega todos os elementos da div que possuem classe .error-text criadas na função creatError
             errorText.remove(); //removemos todos os erros no formulário assim que for reenviado novamente.
         }
 
