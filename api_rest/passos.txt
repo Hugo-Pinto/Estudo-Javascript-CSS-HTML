@@ -1,0 +1,30 @@
+comandos do sequelize para criar a migration e realizar a migration:
+
+npx sequelize migration:create --name=(nome da tabela do banco)
+ex: npx sequelize migration:create --name=alunos
+
+para realizar a migration para o banco:
+npx sequelize db:migrate
+
+caso tenha feito a migration com algum dado de tabela incorreto, executar o comando:
+npx sequelize db:migrate:undo
+
+
+MVC - O MVC é uma sigla do termo em inglês Model (modelo) View (visão) e Controller (Controle) que facilita a
+ troca de informações entre a interface do usuário aos dados no banco, fazendo com que as respostas sejam mais
+ rápidas e dinâmicas.
+
+Primeiro fazemos o Model, posteriormente o controller daquele model e por fim, criando a rota desse controller.
+No APP damos um app.use e a rota.
+
+model: Essa classe também é conhecida como Business Object Model (objeto modelo de negócio). Sua responsabilidade é
+gerenciar e controlar a forma como os dados se comportam por meio das funções, lógica e regras de negócios estabelecidas.
+Ele é o detentor dos dados que recebe as informações do Controller, válida se ela está correta ou não e envia a resposta
+mais adequada.
+
+controller: A camada de controle é responsável por intermediar as requisições enviadas pelo View com as respostas fornecidas
+pelo Model, processando os dados que o usuário informou e repassando para outras camadas. Numa analogia bem simplista, o
+controller  operaria como o ‘’maestro de uma orquestra’’  que permite a comunicação entre o detentor dos dados e a pessoa
+com vários questionamentos no MVC.
+
+route:
